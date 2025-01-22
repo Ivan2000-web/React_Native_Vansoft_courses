@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
+import { Input } from './shared/Input/Input';
 
 export default function App() {
   return (
@@ -7,8 +8,8 @@ export default function App() {
       <View style={styles.content}>
         <Text>Vansoft</Text>  
         <View style={styles.form}>
-          <TextInput style={styles.input}></TextInput>
-          <TextInput style={styles.input}></TextInput>
+          <Input placeholder='Email'/>
+          <Input placeholder='Пароль'/>
           <Button title="Войти"></Button>
         </View>
           <Text>Восстановить пароль</Text>
@@ -31,7 +32,4 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     gap: 16
   },
-  input: {
-    backgroundColor: 'black',
-  }
 });
